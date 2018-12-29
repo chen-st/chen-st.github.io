@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title><![CDATA[test]]></title>
-    <url>%2Funcategorized%2F2018%2F12%2F27%2Ftest%2F</url>
-    <content type="text"><![CDATA[ceshiddlk]]></content>
-  </entry>
+<search> 
+  
+    
+    <entry>
+      <title>test</title>
+      <link href="/uncategorized/2018/12/27/test/"/>
+      <url>/uncategorized/2018/12/27/test/</url>
+      <content type="html"><![CDATA[<p>ceshiddlk</p>]]></content>
+      
+      
+    </entry>
+    
+  
+  
 </search>
