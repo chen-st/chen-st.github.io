@@ -1900,7 +1900,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f7090b;
+  background: #60744d;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3175,6 +3175,15 @@ ul.breadcrumb li+li:last-child {
 .header {
   line-height: 1.5;
 }
+.header-inner {
+  background: rgba(255,255,255,0.6);
+}
+.sidebar {
+  background: rgba(255,255,255,0.6);
+}
+.sidebar-inner {
+  background: rgba(255,255,255,0);
+}
 body {
   background: url("/images/bird.jpg");
   background-repeat: no-repeat;
@@ -3191,7 +3200,7 @@ body {
   font-size: 25px;
 }
 .brand {
-  background-color: rgba(255,255,255,0);
+  background-color: rgba(255,255,255,0.5);
   margin-top: 15px;
   padding: 0px;
 }
@@ -3207,11 +3216,9 @@ body {
   border-bottom-color: #a166ab;
 }
 .menu {
-  text-align: center;
   margin-top: 0px;
   margin-bottom: 0px;
   padding: 2px;
-  background-color: rgba(255,255,255,0.75);
   box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.15);
 }
 .menu .menu-item a {

@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://chenshaotang.com/"/>
-  <updated>2018-12-27T10:44:16.046Z</updated>
-  <id>https://chenshaotang.com/</id>
+  <link href="https://chen-st.github.io/"/>
+  <updated>2018-12-29T06:06:54.030Z</updated>
+  <id>https://chen-st.github.io/</id>
   
   <author>
     <name>陈少棠</name>
@@ -17,9 +17,23 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>记录electron-vue打包</title>
+    <link href="https://chen-st.github.io/uncategorized/2018/12/29/%E8%AE%B0%E5%BD%95electron-vue%E6%89%93%E5%8C%85/"/>
+    <id>https://chen-st.github.io/uncategorized/2018/12/29/记录electron-vue打包/</id>
+    <published>2018-12-29T06:06:53.000Z</published>
+    <updated>2018-12-29T06:06:54.030Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>test</title>
-    <link href="https://chenshaotang.com/uncategorized/2018/12/27/test/"/>
-    <id>https://chenshaotang.com/uncategorized/2018/12/27/test/</id>
+    <link href="https://chen-st.github.io/uncategorized/2018/12/27/test/"/>
+    <id>https://chen-st.github.io/uncategorized/2018/12/27/test/</id>
     <published>2018-12-27T10:44:08.000Z</published>
     <updated>2018-12-27T10:44:16.046Z</updated>
     
