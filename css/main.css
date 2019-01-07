@@ -1900,7 +1900,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff4e39;
+  background: #ffff2b;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3182,13 +3182,15 @@ ul.breadcrumb li+li:last-child {
   background: rgba(255,255,255,0.6);
 }
 .sidebar-inner {
-  background: rgba(255,255,255,0);
+  background: rgba(255,255,255,0.5);
 }
 body {
   background: url("/images/bird.jpg");
   background-repeat: no-repeat;
   height: 100%;
   background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
 }
 .site-meta {
   background-image: url("/images/hd.jpg");
@@ -3241,6 +3243,9 @@ body {
 .posts-expand .post-title-link::before {
   background-image: linear-gradient(90deg, #a166ab 0%, #ef4e7b 25%, #f37055 50%, #ef4e7b 75%, #a166ab 100%);
 }
+.post-block {
+  background: rgba(255,255,255,0.65);
+}
 .posts-expand .post-meta .post-description {
   font-style: italic;
   font-size: 14px;
@@ -3250,20 +3255,16 @@ body {
 }
 .post-button .btn {
   color: #555 !important;
-  background-color: #fff;
+  background-color: rgba(255,255,255,0.4);
   border-radius: 3px;
   font-size: 15px;
-  box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.35);
   border: none !important;
   transition-property: unset;
   padding: 0px 15px;
 }
 .post-button .btn:hover {
-  color: #fff !important;
-  border-radius: 3px;
+  color: #509bff !important;
   font-size: 15px;
-  box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.35);
-  background-image: linear-gradient(90deg, #a166ab 0%, #ef4e7b 25%, #f37055 50%, #ef4e7b 75%, #a166ab 100%);
 }
 a {
   color: #5073b8;
