@@ -16,7 +16,7 @@
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
 <head>
-  <meta charset="UTF-8"/>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
@@ -117,7 +117,7 @@
 <meta property="og:description" content="本文记录了使用electron-vue对vue项目进行打包的处理办法。工欲善其事,必先利其器,在使用electron-vue打包客户端之前,我们需要进行相关的环境配置。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://chenshaotang.com/vue/electron-vue/jie.jpg">
-<meta property="og:updated_time" content="2019-01-12T11:08:32.773Z">
+<meta property="og:updated_time" content="2019-01-14T05:45:52.668Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="记录electron-vue打包">
 <meta name="twitter:description" content="本文记录了使用electron-vue对vue项目进行打包的处理办法。工欲善其事,必先利其器,在使用electron-vue打包客户端之前,我们需要进行相关的环境配置。">
@@ -176,7 +176,7 @@
       .logo-line-after i { right: initial; }
     }
   </style>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </head>
 
@@ -187,7 +187,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -399,7 +399,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-01-12 19:08:32" itemprop="dateModified" datetime="2019-01-12T19:08:32+08:00">2019-01-12</time>
+                <time title="修改时间：2019-01-14 13:45:52" itemprop="dateModified" datetime="2019-01-14T13:45:52+08:00">2019-01-14</time>
               
             
           </span>
@@ -451,7 +451,7 @@
 
       
         <p>本文记录了使用electron-vue对vue项目进行打包的处理办法。工欲善其事,必先利其器,在使用electron-vue打包客户端之前,我们需要进行相关的环境配置。<br><a id="more"></a></p>
-<p>##环境配置<br>需要管理员权限的powershell,外加翻墙,否则很多下载都不成功,关掉杀毒软件</p>
+<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><p>需要管理员权限的powershell,外加翻墙,否则很多下载都不成功,关掉杀毒软件</p>
 <ul>
 <li>安装node,vue-cli</li>
 <li>安装windows-build-tools</li>
@@ -462,7 +462,8 @@
 <blockquote>
 <p>再生成的项目中\src下有main和renderer,其中main为主进程,配置菜单界面大小等,renderer为渲染进程,页面组件在这里配置</p>
 </blockquote>
-<p>结构图如下：<br><img src="/vue/electron-vue/jie.jpg" alt=""><br>无论是选择的packager,还是builder,在生成项目之后,都要执行以下操作:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> project</span><br><span class="line">npm install</span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure></p>
+<p>结构图如下：<br><img src="/vue/electron-vue/jie.jpg" alt="结构图"><br>无论是选择的packager,还是builder,在生成项目之后,都要执行以下操作:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> project</span><br><span class="line">npm install</span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
 <h2 id="electron-builder打包过程"><a href="#electron-builder打包过程" class="headerlink" title="electron-builder打包过程"></a>electron-builder打包过程</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure>
 <p>执行该命令后会下载打包所需要的依赖文件,例如electron-vX.X.X-win32-x64.zip,但通常会出现下载失败,我们可以手动下载,放到指定的目录下。</p>
 <blockquote>
@@ -470,11 +471,12 @@
 </blockquote>
 <p>解决了出现的问题之后继续执行npm run build,如果继续出现错误,仍然按照上述办法解决。<br>另外有两个必装的依赖:winCodeSign和nsis</p>
 <blockquote>
-<p><a href="https://github.com/electron-userland/electron-builder-binaries/releases" target="_blank" rel="noopener">wincodesin包地址</a><br><a href="https://github.com/electron-userland/electron-builder-binaries/releases/tag/nsis-resources-3.0.0" target="_blank" rel="noopener">nsis包地址</a></p>
+<p><a href="https://github.com/electron-userland/electron-builder-binaries/releases">wincodesin包地址</a><br><a href="https://github.com/electron-userland/electron-builder-binaries/releases/tag/nsis-resources-3.0.0">nsis包地址</a></p>
 </blockquote>
 <p>将下载的依赖解压到C:\Users\Administrator\AppData\Local\electron\Cache</p>
 <p>之后就可以顺利打包了</p>
-<h2 id="electron-packer打包过程"><a href="#electron-packer打包过程" class="headerlink" title="electron-packer打包过程"></a>electron-packer打包过程</h2><p>使用packager打包只能生成可执行版,通过下面指令生成相对的客户端。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm run build:win32</span><br><span class="line">npm run build:darwin</span><br><span class="line">npm run build:linux</span><br><span class="line">npm run build:mas</span><br></pre></td></tr></table></figure></p>
+<h2 id="electron-packer打包过程"><a href="#electron-packer打包过程" class="headerlink" title="electron-packer打包过程"></a>electron-packer打包过程</h2><p>使用packager打包只能生成可执行版,通过下面指令生成相对的客户端。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm run build:win32</span><br><span class="line">npm run build:darwin</span><br><span class="line">npm run build:linux</span><br><span class="line">npm run build:mas</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -514,7 +516,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/js难点/js之对象属性/" rel="prev" title="js之对象属性">
+              <a href="/js修仙/js之对象属性/" rel="prev" title="js之对象属性">
                 js之对象属性 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -594,7 +596,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -606,6 +608,8 @@
                 <div class="site-state-item site-state-categories">
                   <a href="/categories/index.html">
                     
+                    
+                      
                     
                       
                     
@@ -628,7 +632,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -717,7 +723,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#构建项目"><span class="nav-number">1.</span> <span class="nav-text">构建项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#electron-builder打包过程"><span class="nav-number">2.</span> <span class="nav-text">electron-builder打包过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#electron-packer打包过程"><span class="nav-number">3.</span> <span class="nav-text">electron-packer打包过程</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境配置"><span class="nav-number">1.</span> <span class="nav-text">环境配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构建项目"><span class="nav-number">2.</span> <span class="nav-text">构建项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#electron-builder打包过程"><span class="nav-number">3.</span> <span class="nav-text">electron-builder打包过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#electron-packer打包过程"><span class="nav-number">4.</span> <span class="nav-text">electron-packer打包过程</span></a></li></ol></div>
             
 
           </div>
@@ -738,7 +744,6 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
 
 
 <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2019</span>
@@ -767,8 +772,17 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共1.8k字</span>
+  <span class="post-count">博客全站共4.6k字</span>
 </div>
+
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"forest"});
+    }
+  </script>
+
         
 
 
@@ -1273,6 +1287,6 @@
   
 
 
-  <script src="../source/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="../source/lib/canvas-nest/canvas-nest.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>

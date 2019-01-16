@@ -16,7 +16,7 @@
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
 <head>
-  <meta charset="UTF-8"/>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
@@ -173,7 +173,7 @@
       .logo-line-after i { right: initial; }
     }
   </style>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </head>
 
@@ -184,7 +184,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -380,10 +380,14 @@
                     
                   
                 
-                目前共计 2 个标签
+                  
+                    
+                  
+                
+                目前共计 3 个标签
             </div>
             <div class="tag-cloud-tags">
-              <a href="/tags/electron/" style="font-size: 12px; color: #ccc">electron</a> <a href="/tags/js/" style="font-size: 12px; color: #ccc">js</a>
+              <a href="/tags/electron/" style="font-size: 12px; color: #ccc">electron</a> <a href="/tags/js/" style="font-size: 30px; color: #111">js</a> <a href="/tags/js-原型链/" style="font-size: 12px; color: #ccc">js 原型链</a>
             </div>
           </div>
         
@@ -444,7 +448,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -456,6 +460,8 @@
                 <div class="site-state-item site-state-categories">
                   <a href="/categories/index.html">
                     
+                    
+                      
                     
                       
                     
@@ -478,7 +484,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -574,7 +582,6 @@
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
-
 <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
@@ -601,8 +608,17 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共1.8k字</span>
+  <span class="post-count">博客全站共4.6k字</span>
 </div>
+
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({"theme":"forest"});
+    }
+  </script>
+
         
 
 
@@ -1107,6 +1123,6 @@
   
 
 
-  <script src="../source/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="../source/lib/canvas-nest/canvas-nest.min.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
