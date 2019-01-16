@@ -1900,7 +1900,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b1327a;
+  background: #fff530;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3297,6 +3297,9 @@ h6 {
 }
 .footer {
   font-size: 16px;
+}
+.mermaid {
+  background: rgba(250,250,255,0);
 }
 ::-webkit-scrollbar {
   width: 5px;
