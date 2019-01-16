@@ -8,7 +8,8 @@
         <category>js修仙</category>
       </categories>
       <tags>
-        <tag>js 原型链</tag>
+        <tag>js</tag>
+        <tag>原型链</tag>
       </tags>
   </entry>
   <entry>
@@ -23,8 +24,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[记录electron-vue打包]]></title>
-    <url>%2Fvue%2Felectron-vue%2F</url>
+    <title><![CDATA[vue之electron打包]]></title>
+    <url>%2Fvue%2Fvue%E4%B9%8Belectron%2F</url>
     <content type="text"><![CDATA[本文记录了使用electron-vue对vue项目进行打包的处理办法。工欲善其事,必先利其器,在使用electron-vue打包客户端之前,我们需要进行相关的环境配置。 环境配置需要管理员权限的powershell,外加翻墙,否则很多下载都不成功,关掉杀毒软件 安装node,vue-cli 安装windows-build-tools 1npm install --global --production windows-build-tools 构建项目1vue init simulatedgreg/electron-vue my-project 在项目初始化过程中会让选择electron-builder或者electron-packager,这是electron打包的两种方式。下面我们会分别介绍两种方式异同。 再生成的项目中\src下有main和renderer,其中main为主进程,配置菜单界面大小等,renderer为渲染进程,页面组件在这里配置 结构图如下：无论是选择的packager,还是builder,在生成项目之后,都要执行以下操作: 123cd projectnpm installnpm run dev electron-builder打包过程1npm run build 执行该命令后会下载打包所需要的依赖文件,例如electron-vX.X.X-win32-x64.zip,但通常会出现下载失败,我们可以手动下载,放到指定的目录下。 解决办法就是根据控制台显示的错误信息,到npm去搜索该文件,下载下来。通常放在C:\Users\Administrator\AppData\Local\electron\Cache 解决了出现的问题之后继续执行npm run build,如果继续出现错误,仍然按照上述办法解决。另外有两个必装的依赖:winCodeSign和nsis wincodesin包地址nsis包地址 将下载的依赖解压到C:\Users\Administrator\AppData\Local\electron\Cache 之后就可以顺利打包了 electron-packer打包过程使用packager打包只能生成可执行版,通过下面指令生成相对的客户端。 1234npm run build:win32npm run build:darwinnpm run build:linuxnpm run build:mas]]></content>
       <categories>
         <category>vue</category>
