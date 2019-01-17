@@ -108,6 +108,21 @@
 
 
 
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
   <meta name="description" content="在js属性描述符这部分有几个较难理解的名词概念，本文旨在描述自己对它们的理解，主要包括:[[Get]]/[[Put]]、get/set、getter/setter几个概念的阐述，数据属性和访问器属性。">
 <meta name="keywords" content="js">
 <meta property="og:type" content="article">

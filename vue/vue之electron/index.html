@@ -108,6 +108,21 @@
 
 
 
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
   <meta name="description" content="本文记录了使用electron-vue对vue项目进行打包的处理办法。工欲善其事,必先利其器,在使用electron-vue打包客户端之前,我们需要进行相关的环境配置。">
 <meta name="keywords" content="electron">
 <meta property="og:type" content="article">

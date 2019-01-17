@@ -108,6 +108,21 @@
 
 
 
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
   <meta name="description" content="自计算机宇宙诞生以来，有很多大神通者在这里开天辟地，开创了很多界，有C、C++、Java等世界，它们彼此相连，其中有一处叫做JavaScript的世界，自被开辟以来吸引了很多修行者来此修炼。JS界由ES、DOM、BOM组成。">
 <meta name="keywords" content="js,原型链">
 <meta property="og:type" content="article">
