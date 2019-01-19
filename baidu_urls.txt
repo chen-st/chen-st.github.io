@@ -1,3 +1,4 @@
+https://chenshaotang.com/js修仙/js之作用域规则/
 https://chenshaotang.com/js修仙/js之传参规则/
 https://chenshaotang.com/js修仙/js修仙之一界本源/
 https://chenshaotang.com/js修仙/js之对象属性/
