@@ -123,16 +123,17 @@
 })();
 </script>
 
-  <meta name="description" content="当时明月在">
-<meta property="og:type" content="website">
-<meta property="og:title" content="齐云札记">
-<meta property="og:url" content="https://chenshaotang.com/archives/index.html">
+  <meta name="description" content="作为闭包三部曲第二部，本文是承上启下的一篇，主要讲解执行上下文环境、环境栈、作用域链的相关概念。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js之执行上下文是什么？">
+<meta property="og:url" content="https://chenshaotang.com/article/js之闭包三部曲中执行上下文/index.html">
 <meta property="og:site_name" content="齐云札记">
-<meta property="og:description" content="当时明月在">
+<meta property="og:description" content="作为闭包三部曲第二部，本文是承上启下的一篇，主要讲解执行上下文环境、环境栈、作用域链的相关概念。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-01-26T13:24:58.493Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="齐云札记">
-<meta name="twitter:description" content="当时明月在">
+<meta name="twitter:title" content="js之执行上下文是什么？">
+<meta name="twitter:description" content="作为闭包三部曲第二部，本文是承上启下的一篇，主要讲解执行上下文环境、环境栈、作用域链的相关概念。">
 
 
 
@@ -141,7 +142,7 @@
 
 
 
-  <link rel="canonical" href="https://chenshaotang.com/archives/"/>
+  <link rel="canonical" href="https://chenshaotang.com/article/js之闭包三部曲中执行上下文/"/>
 
 
 
@@ -151,7 +152,7 @@
   };
 </script>
 
-  <title>归档 | 齐云札记</title>
+  <title>js之执行上下文是什么？ | 齐云札记</title>
   
 
 
@@ -198,7 +199,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-archive">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -243,7 +244,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
   </li>
@@ -331,333 +332,225 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      
-      <span class="archive-page-counter">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://chenshaotang.com/article/js之闭包三部曲中执行上下文/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="陈少棠">
+      <meta itemprop="description" content="当时明月在">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="齐云札记">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h2 class="post-title" itemprop="name headline">js之执行上下文是什么？
+              
+            
+          </h2>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-01-21 15:27:06" itemprop="dateCreated datePublished" datetime="2019-01-21T15:27:06+08:00">2019-01-21</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-01-26 21:24:58" itemprop="dateModified" datetime="2019-01-26T21:24:58+08:00">2019-01-26</time>
+              
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 7 篇日志。 继续努力。
-      </span>
-      
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h2 class="archive-year" id="archive-year-2019">2019</h2>
-          </div>
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/js修仙/js之闭包三部曲下/" itemprop="url">
-              
-                <span itemprop="name">js之闭包是如何产生的？</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-01-26T18:49:58+08:00"
-              content="2019-01-26" >
-          01-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/article/js之闭包三部曲中执行上下文/" itemprop="url">
-              
-                <span itemprop="name">js之执行上下文是什么？</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-01-21T15:27:06+08:00"
-              content="2019-01-21" >
-          01-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/js修仙/js之闭包三部曲上作用域规则/" itemprop="url">
-              
-                <span itemprop="name">JS之如何理解作用域的概念</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-01-19T09:09:14+08:00"
-              content="2019-01-19" >
-          01-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/js修仙/js之传参规则/" itemprop="url">
-              
-                <span itemprop="name">JS之函数传参与深浅拷贝原理</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-01-18T22:35:35+08:00"
-              content="2019-01-18" >
-          01-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/js修仙/js修仙之一界本源/" itemprop="url">
-              
-                <span itemprop="name">JS修仙之一界本源</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-01-16T15:00:42+08:00"
-              content="2019-01-16" >
-          01-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/js修仙/js之对象属性/" itemprop="url">
-              
-                <span itemprop="name">JS对象属性中get/set与getter/setter是什么</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-01-10T23:47:32+08:00"
-              content="2019-01-10" >
-          01-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
+            
           
-          <div class="collection-title">
-            <h2 class="archive-year" id="archive-year-2018">2018</h2>
-          </div>
-        
-        
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/vue/vue之electron/" itemprop="url">
-              
-                <span itemprop="name">vue之electron打包</span>
-              
-            </a>
-        
-      </h3>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-12-29T14:06:53+08:00"
-              content="2018-12-29" >
-          12-29
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
+      
+        <p>作为闭包三部曲第二部，本文是承上启下的一篇，主要讲解执行上下文环境、环境栈、作用域链的相关概念。<br><a id="more"></a></p>
+<h2 id="执行上下文是什么"><a href="#执行上下文是什么" class="headerlink" title="执行上下文是什么"></a>执行上下文是什么</h2><p>执行上下文(execution context)，也叫做执行环境，是JS代码执行过程中一个至关重要的环节。context是语境，上下文，环境，背景的意思，这就很明显很直白了，所谓执行环境和咱们平时讲的学习环境、工作环境是一个意思。任何事物都离不开环境，自然环境也是环境，产品离不开车间环境，代码也在环境里才能被执行，它是为了代码能被执行而创造的，执行环境里面主要包含了变量对象、作用域链、this。</p>
+<p>执行环境不是先天就有的，而是为了执行代码才特地创造符合执行这段代码的一个环境，就好像我为了种一朵花，而搞了个温室大棚一样。</p>
+<h3 id="执行环境的生命周期"><a href="#执行环境的生命周期" class="headerlink" title="执行环境的生命周期"></a>执行环境的生命周期</h3><p>在js之作用域篇中，我们举例用医院动手术的来比喻作用域是什么，事实上执行上下文也蕴含在其中。</p>
+<p>为了给病人做手术，院方(浏览器、node)创造了一个无菌手术室(全局环境)，然后为了完成手术，与这个手术相关的所有器材药物医务人员都安排好(变量对象)，进行麻醉、开刀、缝合等手术(函数)，每个子手术也都要在相应的区域内完成(函数执行环境)，在这些区域内，有相应的器材药物医务人员(活动对象)。这在手术室里一步步完成，最终完成手术，然后病人离开手术室(执行环境栈)。</p>
+<p>全局变量环境始终存在的。<br>函数执行环境主要经历了几个阶段：</p>
+<ol>
+<li>在创建函数时，会创建相应的执行环境</li>
+<li>创建变量对象/活动对象</li>
+<li>创建作用域链、赋值this</li>
+<li>函数被调用，执行环境会把压入栈中</li>
+<li>代码在执行环境在被执行</li>
+<li>执行环境从执行环境栈出栈，被回收</li>
+</ol>
+<h2 id="变量对象-活动对象"><a href="#变量对象-活动对象" class="headerlink" title="变量对象/活动对象"></a>变量对象/活动对象</h2><p>变量对象是执行环境里的一个特殊对象，它包含了所有变量和函数。<strong>可以把它看作是函数执行前的预处理</strong>。</p>
+<p><strong>函数才有活动对象，当执行环境是函数时，活动对象被当作变量环境</strong>。它包含arguments、this和其他命名参数的值。arguments只有函数的执行环境才有，this也只能在函数内部使用。</p>
+<h3 id="变量提升的本质"><a href="#变量提升的本质" class="headerlink" title="变量提升的本质"></a>变量提升的本质</h3><ol>
+<li>它在创建时只有一个arguments，然后开始通过<strong>作用域规则</strong>检测作用域内所有变量和函数的声明。</li>
+<li>找到函数的声明时，会在变量对象创建属性，属性名就是该函数名，属性值是指针，指向函数的内存地址。</li>
+<li>检测变量声明，找到之后同样会创建属性，属性名是变量名，属性被赋undefined</li>
+</ol>
+<p>所以变量提升的本质就在这，变量对象创建时，会检测函数和变量声明，将变量和函数声明变成<strong>变量对象的属性</strong>，并且将变量声明赋值为undefined，函数的是地址。</p>
+<h2 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h2><p>作用域链形式上是个数组，本质上是一个指向变量对象的指针列表，它只引用但不实际包含变量对象。</p>
+<p>每个执行环境都有属于自己的作用域链。</p>
+<p>作用域链的值赋给了执行环境内部的[[Scope]]属性，作用域链是数组形式，scope[0]是当前活动对象，scope[1]是外部函数的活动对象，……scope[leght-1]是全局变量对象。</p>
+<p>所以可以通过作用域链找到其他作用域的变量，这就是作用域链的原理。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>前面讲到，当为了程序能够顺利执行而专门创造了一个舒适的环境（执行环境），在这个环境里，又创造了一个变量对象，作用域链和this。<br>有没有发现作用域是访问变量的规则，而变量对象也包含了变量函数声明，那他们是一回事嘛？作用域和变量对象什么区别？</p>
+<p>在作用域一文中，介绍了作用域的两个作用，</p>
+<ul>
+<li>一个是在编译过程中，引擎会查询看作用域中有没有某个变量，没有的话要声明，有的话就跳过。</li>
+<li>另一个作用是在程序执行时，引擎会通过作用域找到某个变量，然后进行赋值等操作。</li>
+</ul>
+<p><strong>变量对象是程序执行的预处理</strong>，变量对象里会对变量声明进行提升和赋值undefined。</p>
+<p>变量对象和作用域并不是一个东西，另外两点。</p>
+<ol>
+<li><strong>作用域是在代码写下来就产生了，执行环境在代码执行时才被创建，作用域链是在执行环境里才被创建</strong>。</li>
+<li>执行环境在代码执行完了之后被清除。</li>
+</ol>
+<p>本文是陈少棠原创，收录在《齐云札记》，转载请标明原作。</p>
+
+      
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/js修仙/js之闭包三部曲上作用域规则/" rel="next" title="JS之如何理解作用域的概念">
+                <i class="fa fa-chevron-left"></i> JS之如何理解作用域的概念
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/js修仙/js之闭包三部曲下/" rel="prev" title="js之闭包是如何产生的？">
+                js之闭包是如何产生的？ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -678,8 +571,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -817,6 +719,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#执行上下文是什么"><span class="nav-number">1.</span> <span class="nav-text">执行上下文是什么</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#执行环境的生命周期"><span class="nav-number">1.1.</span> <span class="nav-text">执行环境的生命周期</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量对象-活动对象"><span class="nav-number">2.</span> <span class="nav-text">变量对象/活动对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#变量提升的本质"><span class="nav-number">2.1.</span> <span class="nav-text">变量提升的本质</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#作用域链"><span class="nav-number">3.</span> <span class="nav-text">作用域链</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -973,6 +891,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
 
   
 

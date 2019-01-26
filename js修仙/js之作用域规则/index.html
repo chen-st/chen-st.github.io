@@ -123,18 +123,18 @@
 })();
 </script>
 
-  <meta name="description" content="js世界中，有种奇特的规则叫做闭包，它好像披着一层面纱，让人看不清真面目。然而讲闭包时，往往都会和作用域联系到一起，原因很简单，闭包的出现就是受到作用域规则的影响，可以说是因果关系。所以齐云道长先把作用域规则放在前面。今日道长就讲述这个规则，下期让闭包真容显现。本文收录在《齐云札记》js修仙系列。">
+  <meta name="description" content="js世界中，有种奇特的规则叫做闭包，它好像披着一层面纱，让人看不清真面目。然而讲闭包时，往往都会和作用域联系到一起，原因很简单，闭包的出现就是受到作用域规则的影响，可以说是因果关系。所以齐云道长先把作用域规则放在前面，然后下期让闭包真容显现。">
 <meta name="keywords" content="js,作用域闭包">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js之作用域规则">
 <meta property="og:url" content="https://chenshaotang.com/js修仙/js之作用域规则/index.html">
 <meta property="og:site_name" content="齐云札记">
-<meta property="og:description" content="js世界中，有种奇特的规则叫做闭包，它好像披着一层面纱，让人看不清真面目。然而讲闭包时，往往都会和作用域联系到一起，原因很简单，闭包的出现就是受到作用域规则的影响，可以说是因果关系。所以齐云道长先把作用域规则放在前面。今日道长就讲述这个规则，下期让闭包真容显现。本文收录在《齐云札记》js修仙系列。">
+<meta property="og:description" content="js世界中，有种奇特的规则叫做闭包，它好像披着一层面纱，让人看不清真面目。然而讲闭包时，往往都会和作用域联系到一起，原因很简单，闭包的出现就是受到作用域规则的影响，可以说是因果关系。所以齐云道长先把作用域规则放在前面，然后下期让闭包真容显现。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-19T14:16:16.305Z">
+<meta property="og:updated_time" content="2019-01-20T03:37:06.351Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js之作用域规则">
-<meta name="twitter:description" content="js世界中，有种奇特的规则叫做闭包，它好像披着一层面纱，让人看不清真面目。然而讲闭包时，往往都会和作用域联系到一起，原因很简单，闭包的出现就是受到作用域规则的影响，可以说是因果关系。所以齐云道长先把作用域规则放在前面。今日道长就讲述这个规则，下期让闭包真容显现。本文收录在《齐云札记》js修仙系列。">
+<meta name="twitter:description" content="js世界中，有种奇特的规则叫做闭包，它好像披着一层面纱，让人看不清真面目。然而讲闭包时，往往都会和作用域联系到一起，原因很简单，闭包的出现就是受到作用域规则的影响，可以说是因果关系。所以齐云道长先把作用域规则放在前面，然后下期让闭包真容显现。">
 
 
 
@@ -395,12 +395,24 @@
                 
               
 
-              <time title="创建时间：2019-01-19 09:09:14 / 修改时间：22:16:16" itemprop="dateCreated datePublished" datetime="2019-01-19T09:09:14+08:00">2019-01-19</time>
+              <time title="创建时间：2019-01-19 09:09:14" itemprop="dateCreated datePublished" datetime="2019-01-19T09:09:14+08:00">2019-01-19</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-01-20 11:37:06" itemprop="dateModified" datetime="2019-01-20T11:37:06+08:00">2019-01-20</time>
               
             
           </span>
@@ -451,17 +463,17 @@
       
 
       
-        <p>js世界中，有种奇特的规则叫做闭包，它好像披着一层面纱，让人看不清真面目。然而讲闭包时，往往都会和作用域联系到一起，原因很简单，闭包的出现就是受到作用域规则的影响，可以说是因果关系。所以齐云道长先把作用域规则放在前面。今日道长就讲述这个规则，下期让闭包真容显现。本文收录在《齐云札记》js修仙系列。<br><a id="more"></a></p>
-<h2 id="作用域是什么"><a href="#作用域是什么" class="headerlink" title="作用域是什么"></a>作用域是什么</h2><p>在<a href="https://chenshaotang.com/js修仙/js修仙之一界本源/">js修仙之一界本源</a>一文中，描绘了js世界中这引擎就是天地，js代码也在它里面被执行。我们先看一下具体的例子：</p>
-<p>es6之前，只有全局作用域和函数作用域，作用域可以比喻成一个大的图书馆，有收录和查阅的功能。 大图书馆就是全局作用域，图书馆里又分成不同的收藏室，收藏室下面又分不同的阅览区，阅览区里就是我们的图书——变量了，这就是函数作用域，层层嵌套。图书管理系统里收录了图书编号，查询图书会先找到编号，这就是变量提升。es6加入了块级作用域，就好比图书馆建立起了一个临时读书区域，里面放着的是同学们自己带的书，用作交流阅读，如果没有这个读书区，同学们的书可能会导致的覆盖外层变量还有泄露为全局变量(后面再介绍)。</p>
-<figure class="highlight plain"><figcaption><span>a</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">js中的作用域的工作方式通常指的是词法作用域，意思就是**作用域在写代码的时候就确定了**。</span><br><span class="line"></span><br><span class="line">## 变量提升规则</span><br><span class="line">当变量在函数里声明时，就形成了一个函数作用域，在外部声明时，是全局作用域。回到前面讲的代码执行前，编译器会先将变量声明提升到作用域的顶部，而变量赋值和逻辑操作则会留在原处，等待被调用。</span><br><span class="line">```javascript</span><br><span class="line">bar();</span><br><span class="line">function bar()&#123;</span><br><span class="line">	console.log(a)</span><br><span class="line">	var a = 4;</span><br><span class="line">&#125;</span><br><span class="line">var foo = function()&#123;</span><br><span class="line">	console.log(4);</span><br><span class="line">&#125;</span><br><span class="line">var b = 2;</span><br></pre></td></tr></table></figure>
+        <p>js世界中，有种奇特的规则叫做闭包，它好像披着一层面纱，让人看不清真面目。然而讲闭包时，往往都会和作用域联系到一起，原因很简单，闭包的出现就是受到作用域规则的影响，可以说是因果关系。所以齐云道长先把作用域规则放在前面，然后下期让闭包真容显现。<br><a id="more"></a></p>
+<h2 id="作用域是什么"><a href="#作用域是什么" class="headerlink" title="作用域是什么"></a>作用域是什么</h2><p>在<a href="https://chenshaotang.com/js修仙/js修仙之一界本源/">js修仙之一界本源</a>一文中，描绘了js世界中这引擎就是天地，js代码也在它里面被执行。而代码的执行也离不开编译器和作用域，关于作用域，我做了一个比喻：</p>
+<p>es6之前，只有全局作用域和函数作用域，作用域可以比喻成一个大的图书馆，有收录和查阅的功能。 大图书馆就是全局作用域，图书馆里又分成不同的收藏室，收藏室下面又分不同的阅览区，阅览区里就是我们的图书——变量了，这就是函数作用域，层层嵌套。图书管理系统里收录了图书编号，这就是变量提升，查询图书会先找到编号。es6加入了块级作用域，就好比图书馆建立起了一个临时读书区域，里面放着的是同学们自己带的书，用作交流阅读，如果没有这个读书区，同学们的书可能会流落到图书馆里，导致图书混淆，这就是覆盖外层变量还有泄露为全局变量(后面再介绍)。</p>
+<figure class="highlight plain"><figcaption><span>a</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">就比如我们要对图书馆进行图书整理，发现没有这本书，就会再阅览区新添加这个编号，后面会把书新增到这里。而引擎执行代码就是在再阅览区找这本书，然后拿了阅览，当找不到的时候就会到它所在的收藏室查询，看看是不是其他区域有，找不到就一直到总图书馆的查询系统，这就是**作用域链**。当然这个例子也不完全贴切，只是为了简单形象的描述作用域的工作方式。</span><br><span class="line"></span><br><span class="line">js中的作用域的工作方式通常指的是词法作用域，这句话意思就是**作用域在写代码的时候就确定了**。</span><br><span class="line"></span><br><span class="line">## 变量提升规则</span><br><span class="line">理解了作用域是什么之后，讲一下作用域里的一个特性——变量提升，它是受到编译器的影响。代码执行前，编译器会先将变量声明提升到作用域的顶部，而变量赋值和逻辑操作则会留在原处，等待被调用。当变量在函数里声明时，就形成了一个函数作用域，在外部声明时，是全局作用域。</span><br><span class="line">```javascript</span><br><span class="line">bar();</span><br><span class="line">function bar()&#123;</span><br><span class="line">	console.log(a)</span><br><span class="line">	var a = 4;</span><br><span class="line">&#125;</span><br><span class="line">var foo = function()&#123;</span><br><span class="line">	console.log(4);</span><br><span class="line">&#125;</span><br><span class="line">var b = 2;</span><br></pre></td></tr></table></figure>
 <p>这段代码执行顺序其实是这样<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>)</span>&#123;    <span class="comment">//函数声明优先级最高，被提到最前面</span></span><br><span class="line">	<span class="keyword">var</span> a;			<span class="comment">//变量声明会被提到作用域顶端</span></span><br><span class="line">	<span class="built_in">console</span>.log(a);   <span class="comment">//由于赋值操作没有被提前，所以返回undefined </span></span><br><span class="line">	a = <span class="number">4</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> foo;	<span class="comment">//函数赋值只会把声明提前</span></span><br><span class="line"><span class="keyword">var</span> b;      <span class="comment">//变量在全局环境下，提到全局作用域顶端。</span></span><br><span class="line">bar();</span><br><span class="line">foo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;   <span class="comment">// 这些依然留在后面</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="number">4</span>)</span><br><span class="line">&#125;</span><br><span class="line">b = <span class="number">2</span>;</span><br></pre></td></tr></table></figure></p>
 <p>函数声明优先级是最高的。之后才是变量声明。变量提升是js的一个特性了，但是也带来了不少问题，再加上在es6之前没有块级作用域，内层变量有时候会因为提升覆盖掉外面的。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">3</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(a);</span><br><span class="line">	<span class="keyword">if</span>(<span class="literal">false</span>)&#123;</span><br><span class="line">		<span class="keyword">var</span> a = <span class="number">4</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">foo(); <span class="comment">//undefined</span></span><br></pre></td></tr></table></figure></p>
 <p>本来想着console.log的是全局变量的3，实际上由于变量提升，内部的变量声明提升到函数作用域顶部，变成了var a; console.log(a)，所以才会是undefined。</p>
-<h2 id="块作用域规则"><a href="#块作用域规则" class="headerlink" title="块作用域规则"></a>块作用域规则</h2><p>es6提出了let、const、块级作用域，因此作用域规则也随着发生了改变。之前js只有全局作用域和函数作用域，但是显然会有很多问题，比如在<code>for(var i=0;i&lt;5;i++){console.log(i)}</code>中，i会被绑定到外部作用域，造成全局变量污染，另外会造成对外部变量的覆盖。<br>块级作用域正是为了解决这些问题，讲代码封装在里面。这也使得es5中立即执行函数有了替代。es6块级作用域可以嵌套，也可以声明函数。外层作用域无法读取内层。</p>
+<h2 id="块作用域规则"><a href="#块作用域规则" class="headerlink" title="块作用域规则"></a>块作用域规则</h2><p>es6提出了let、const、块级作用域，因此作用域规则也随着发生了改变。之前js只有全局作用域和函数作用域，但是显然会有很多问题，比如在<code>for(var i=0;i&lt;5;i++){console.log(i)}</code>中，i会被绑定到外部作用域，造成全局变量污染，另外会造成对外部变量的覆盖。<br>块级作用域正是为了解决这些问题，将代码封装在里面。这也使得es5中立即执行函数有了替代。es6块级作用域可以嵌套，也可以声明函数。外层作用域无法读取内层。</p>
 <h2 id="let、const规则"><a href="#let、const规则" class="headerlink" title="let、const规则"></a>let、const规则</h2><p>let和const用来声明变量，使用let的时候，let会创造一个块作用域，声明的变量只在作用域中有效。在上面for循环问题中，let就可以完美解决var提升的问题。<br>let有以下他几个规则：<br>1、创造块级作用域，变量在块级作用域才有用<br>2、不允许重复声明</p>
-<p>const大体和let相似，但是有个特点，const声明的是常量，变量的值不能重新赋值。</p>
-<p>关于变量提升，let和const是不允许提升的，事实上，let和const下变量也是有提升的，只不过这个时候会报错，所以只能老老实实的在调用变量之前声明这个变量。在块级作用域下声明的函数也会被提升。</p>
+<p>const大体和let相似，但是有个特点，<strong>const声明的是常量</strong>，变量的值不能重新赋值。</p>
+<p>关于变量提升，let和const是不允许提升的，事实上，let和const下变量也是有提升的，只不过调用变量之前没声明这个变量会报错，所以只能老老实实的在调用前声明。在块级作用域下声明的函数也会被提升。</p>
 <p>本文结合了es5和es6中和作用域有关系的相关概念，阐述了作用域在js中主要作用和对其他的影响，当然还有个没讲，就是闭包，详见js之闭包规则。</p>
 <p>本文是陈少棠原创，收录在《齐云札记》，转载请标明原作。</p>
 
@@ -499,8 +511,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/js修仙/js之传参规则/" rel="next" title="js之数据类型引发的问题">
-                <i class="fa fa-chevron-left"></i> js之数据类型引发的问题
+              <a href="/js修仙/js之传参规则/" rel="next" title="JS之函数传参与深浅拷贝原理">
+                <i class="fa fa-chevron-left"></i> JS之函数传参与深浅拷贝原理
               </a>
             
           </div>
@@ -614,8 +626,6 @@
                 <div class="site-state-item site-state-tags">
                   <a href="/tags/index.html">
                     
-                    
-                      
                     
                       
                     
@@ -763,7 +773,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共7.2k字</span>
+  <span class="post-count">博客全站共7.6k字</span>
 </div>
 
 

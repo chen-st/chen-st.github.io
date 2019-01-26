@@ -1,4 +1,6 @@
-https://chenshaotang.com/js修仙/js之作用域规则/
+https://chenshaotang.com/js修仙/js之闭包三部曲下/
+https://chenshaotang.com/article/js之闭包三部曲中执行上下文/
+https://chenshaotang.com/js修仙/js之闭包三部曲上作用域规则/
 https://chenshaotang.com/js修仙/js之传参规则/
 https://chenshaotang.com/js修仙/js修仙之一界本源/
 https://chenshaotang.com/js修仙/js之对象属性/

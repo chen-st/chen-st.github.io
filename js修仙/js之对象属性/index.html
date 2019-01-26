@@ -126,14 +126,14 @@
   <meta name="description" content="在js属性描述符这部分有几个较难理解的名词概念，本文旨在描述自己对它们的理解，并收录在《齐云札记》里，主要包括:[[Get]]/[[Put]]、get/set、getter/setter几个概念的阐述，数据属性和访问器属性。">
 <meta name="keywords" content="js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS之对象属性">
+<meta property="og:title" content="JS对象属性中get&#x2F;set与getter&#x2F;setter是什么">
 <meta property="og:url" content="https://chenshaotang.com/js修仙/js之对象属性/index.html">
 <meta property="og:site_name" content="齐云札记">
 <meta property="og:description" content="在js属性描述符这部分有几个较难理解的名词概念，本文旨在描述自己对它们的理解，并收录在《齐云札记》里，主要包括:[[Get]]/[[Put]]、get/set、getter/setter几个概念的阐述，数据属性和访问器属性。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-18T15:31:29.308Z">
+<meta property="og:updated_time" content="2019-01-20T02:46:37.259Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS之对象属性">
+<meta name="twitter:title" content="JS对象属性中get&#x2F;set与getter&#x2F;setter是什么">
 <meta name="twitter:description" content="在js属性描述符这部分有几个较难理解的名词概念，本文旨在描述自己对它们的理解，并收录在《齐云札记》里，主要包括:[[Get]]/[[Put]]、get/set、getter/setter几个概念的阐述，数据属性和访问器属性。">
 
 
@@ -153,7 +153,7 @@
   };
 </script>
 
-  <title>JS之对象属性 | 齐云札记</title>
+  <title>JS对象属性中get/set与getter/setter是什么 | 齐云札记</title>
   
 
 
@@ -370,7 +370,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">JS之对象属性
+          <h2 class="post-title" itemprop="name headline">JS对象属性中get/set与getter/setter是什么
               
             
           </h2>
@@ -412,7 +412,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-01-18 23:31:29" itemprop="dateModified" datetime="2019-01-18T23:31:29+08:00">2019-01-18</time>
+                <time title="修改时间：2019-01-20 10:46:37" itemprop="dateModified" datetime="2019-01-20T10:46:37+08:00">2019-01-20</time>
               
             
           </span>
@@ -496,7 +496,7 @@
 <blockquote>
 <p>实际上我们赋值([[Put]])操作中的值2存储到了另一个变量_a_中。名称_a_只是一种惯例，没有任何特殊行为。</p>
 </blockquote>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>属性是拥有自己的特性的，主要用来描述属性是否可以进行修改枚举配置的。我们访问对象的属性时就是[[Get]]操作，写入就是[[Put]]，根据算法找到<br>对应的属性。如果要对属性值进行附加操作时，就需要设置get/set特性，此时属性也就会变成访问器属性，然后调用默认的隐藏的getter/setter函数对属性<br>进行操作。然后返回属性值。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>属性是拥有自己的特性的，主要用来描述属性是否可以进行修改枚举配置的。我们访问对象的属性时就是[[Get]]操作，写入就是[[Put]]，根据算法找到对应的属性。如果要对属性值进行附加操作时，就需要设置get/set特性，此时属性也就会变成访问器属性，然后调用默认的隐藏的getter/setter函数对属性进行操作。然后返回属性值。</p>
 <p>本文是陈少棠原创，收录在《齐云札记》，转载请标明原作。</p>
 
       
@@ -621,7 +621,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -661,7 +661,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -799,7 +799,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共7.2k字</span>
+  <span class="post-count">博客全站共10.1k字</span>
 </div>
 
 
